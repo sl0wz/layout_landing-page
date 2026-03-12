@@ -1,0 +1,33 @@
+.header {
+  // display: none !important;
+  background-image: url(/src/images/header-bg-mobile.png);
+  background-size: cover;
+  background-position: 85% center;
+
+  &__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 88px;
+    width: 100%;
+    max-width: 1600px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-transform: none;
+  }
+
+  &__bottom {
+    padding: 0 80px 60px;
+  }
+}
