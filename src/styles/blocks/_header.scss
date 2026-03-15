@@ -9,25 +9,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
   }
 
   &__title {
     display: block;
-    text-align: center;
     margin-bottom: 88px;
     width: 100%;
     max-width: 1600px;
     text-align: center;
     white-space: nowrap;
     font-weight: 700;
+    font-size: 36px;
     font-style: bold;
     line-height: 100%;
     letter-spacing: -1.5px;
     text-transform: none;
-  }
 
-  &__bottom {
-    padding: 0 80px 60px;
+    @include on-tablet {
+      font-size: 60px;
+    }
+
+    @include on-desktop {
+      font-size: 80px;
+    }
+
+    &__bottom {
+      padding: 0 80px 60px;
+    }
   }
 }

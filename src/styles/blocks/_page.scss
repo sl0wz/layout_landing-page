@@ -1,6 +1,6 @@
 .page {
-  font-family: "Poppins", sans-serif;
-  color: #FFFFFF;
+  font-family: Poppins, sans-serif;
+  color: #fff;
   scroll-behavior: smooth;
 
   &__body {
@@ -31,9 +31,9 @@
     row-gap: 96px;
     padding-block: 96px;
 
-    @include onTablet {
-    padding-block: 120px;
-    row-gap: 120px;
+    @include on-tablet {
+      padding-block: 120px;
+      row-gap: 120px;
     }
   }
 }
@@ -51,11 +51,11 @@
     display: grid;
     row-gap: 40px;
 
-    @include onTablet {
+    @include on-tablet {
       justify-items: center;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 24px;
       justify-items: stretch;
@@ -68,19 +68,19 @@
   row-gap: 16px;
   grid-template-columns: 1fr;
 
-  @include onTablet {
+  @include on-tablet {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
     align-items: start;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     column-gap: 40px;
     padding-bottom: 164px;
   }
 
   &__content {
-    @include onDesktop {
+    @include on-desktop {
       max-width: 440px;
     }
   }
@@ -93,7 +93,7 @@
     line-height: 140%;
     display: grid;
     row-gap: 16px;
-   }
+  }
 }
 
 .categories {
@@ -101,7 +101,7 @@
     display: grid;
     row-gap: 40px;
 
-    @include onTablet {
+    @include on-tablet {
       row-gap: 64px;
     }
   }
@@ -114,11 +114,11 @@
     margin-bottom: 16px;
     gap: 16px;
 
-    @include onTablet {
+    @include on-tablet {
       grid-template-columns: repeat(6, 1fr);
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-template-columns: repeat(8, 1fr);
     }
   }
@@ -126,33 +126,28 @@
   &__link {
     position: relative;
     display: block;
-    // height: 0;
-
+    height: 324px;
     &--wide {
-      // grid-column: span 2;
-      // padding-bottom: 100%;
-      aspect-ratio: 1 / 1;
-      @include onTablet {
+      width: 100%;
+
+      @include on-tablet {
         grid-column: span 4;
-        // padding-bottom: 50%;
-        aspect-ratio: 2 / 1;
       }
 
-      @include onDesktop {
+      @include on-desktop {
         grid-column: span 6;
-        aspect-ratio: 3 / 1;
       }
     }
 
     &--square {
-      // height: 0;
-      // padding-bottom: 100%;
-      aspect-ratio: 1 / 1;
-      @include onTablet {
-      grid-column: span 2;
+      width: 320px;
+      max-width: 100%;
+
+      @include on-tablet {
+        grid-column: span 2;
       }
 
-      @include onDesktop {
+      @include on-desktop {
         grid-column: span 2;
       }
     }
@@ -173,6 +168,21 @@
     font-size: 24px;
     line-height: 140%;
   }
+
+  &__description {
+    margin-top: 8px;
+    margin-bottom: 48px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    display: block;
+    margin: 40px auto 0;
+  }
 }
 
 .contact {
@@ -180,11 +190,11 @@
   color: #fff;
   padding-block: 80px;
 
-  @include onTablet {
+  @include on-tablet {
     padding-block: 100px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     padding-block: 120px;
   }
 
@@ -193,7 +203,7 @@
     flex-direction: column;
     gap: 40px;
 
-    @include onTablet {
+    @include on-tablet {
       flex-direction: row;
       justify-content: space-between;
       gap: 80px;
@@ -217,6 +227,11 @@
       transition: 0.3s ease;
     }
 
+    textarea {
+      border-radius: 16px;
+      resize: none;
+    }
+
     input::placeholder,
     textarea::placeholder {
       color: #292929;
@@ -224,20 +239,15 @@
       opacity: 1;
     }
 
-    textarea {
-      border-radius: 16px;
-      resize: none;
+    input,
+    textarea,
+    button {
+      font-family: inherit;
     }
 
     input:focus,
     textarea:focus {
       box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-    }
-
-    input,
-    textarea,
-    button {
-      font-family: inherit;
     }
   }
 
@@ -249,7 +259,7 @@
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
-    transition: 1 ease;
+    transition: 0.3s ease;
 
     &:hover {
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
@@ -280,4 +290,9 @@
       line-height: 1.5;
     }
   }
+}
+
+.detail__actions .contact__button {
+  width: 324px;
+  height: 56px;
 }

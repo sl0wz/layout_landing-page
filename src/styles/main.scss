@@ -2,12 +2,12 @@ body {
   margin: 0;
 }
 
-@import './other/_variables.scss';
-@import './other/_mixin.scss';
-@import './blocks/_page.scss';
-@import './blocks/_header.scss';
-@import './blocks/_menu.scss';
-@import './blocks/_nav.scss';
-@import './blocks/_icon.scss';
-@import './blocks/_footer.scss';
-@import './blocks/_section-title.scss';
+@import './other/variables';
+@import './other/mixin';
+@import './blocks/page';
+@import './blocks/header';
+@import './blocks/menu';
+@import './blocks/nav';
+@import './blocks/icon';
+@import './blocks/footer';
+@import './blocks/section-title';
