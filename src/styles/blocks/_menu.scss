@@ -25,6 +25,7 @@
   color: #1d1d1d;
   font-weight: 600;
   text-transform: uppercase;
+  overflow: auto;
 
   &__top {
     margin-bottom: 24px;
@@ -60,4 +61,8 @@
     letter-spacing: 2px;
     text-decoration: none;
   }
+}
+
+.page:has(.menu:target) {
+  overflow: hidden;
 }

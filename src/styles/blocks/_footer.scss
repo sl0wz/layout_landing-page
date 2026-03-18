@@ -5,4 +5,8 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 1050px;
+
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
 }
