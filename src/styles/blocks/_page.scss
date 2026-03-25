@@ -126,6 +126,7 @@
     position: relative;
     display: block;
     height: 324px;
+
     &--wide {
       width: 100%;
 
@@ -139,15 +140,17 @@
     }
 
     &--square {
-      width: 320px;
+      // width: 320px;
       max-width: 100%;
 
       @include on-tablet {
         grid-column: span 2;
+        width: 320px;
       }
 
       @include on-desktop {
         grid-column: span 2;
+        width: 320px;
       }
     }
   }
@@ -283,7 +286,6 @@
   &__info {
     display: flex;
     flex-direction: column;
-    margin-right: 250px;
     gap: 32px;
 
     @include on-tablet {

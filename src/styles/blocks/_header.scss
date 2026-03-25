@@ -2,7 +2,7 @@
   // display: none !important;
   background-image: url(/src/images/header-bg-mobile.png);
   background-size: cover;
-  background-position: 85% center;
+  background-position: center;
 
   &__content {
     height: 100vh;
@@ -17,7 +17,6 @@
     width: 100%;
     max-width: 1600px;
     text-align: center;
-    white-space: nowrap;
     font-weight: 700;
     font-size: 36px;
     font-style: bold;
@@ -27,14 +26,39 @@
 
     @include on-tablet {
       font-size: 60px;
+      white-space: nowrap;
     }
 
     @include on-desktop {
       font-size: 80px;
     }
+  }
 
-    &__bottom {
+  &__bottom {
+    padding: 0 80px 60px;
+
+    @include on-tablet {
       padding: 0 80px 60px;
     }
   }
+}
+
+.top-bar__phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar__phone-number {
+  position: absolute;
+  right: 40px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.top-bar__phone:hover .top-bar__phone-number {
+  opacity: 1;
 }
