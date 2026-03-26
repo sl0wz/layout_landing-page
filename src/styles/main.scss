@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 @import './other/variables';
 @import './other/mixin';
 @import './blocks/page';
