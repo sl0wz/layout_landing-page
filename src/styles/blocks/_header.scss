@@ -5,7 +5,7 @@
   background-position: center;
 
   &__content {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     max-width: 1600px;
     text-align: center;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 34px;
     font-style: bold;
     line-height: 100%;
     letter-spacing: -1.5px;
@@ -35,10 +35,10 @@
   }
 
   &__bottom {
-    padding: 0 20px 40px;
+    padding-bottom: 40px;
 
     @include on-tablet {
-      padding: 0 80px 60px;
+      padding-bottom: 60px;
     }
   }
 }
@@ -57,6 +57,18 @@
   pointer-events: none;
   transition: 0.3s;
   font-size: 14px;
+}
+
+.top-bar__logo img {
+  width: 150px;
+
+  @include on-tablet {
+    width: 200px;
+  }
+
+  @include on-desktop {
+    padding-right: 1000px;
+  }
 }
 
 .top-bar__phone:hover .top-bar__phone-number {
