@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Landing Page</title>
+    <link rel="icon" href="src/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,29 +24,36 @@
   <!-- #endregion -->
   <body class="page__body">
     <header class="header">
-      <div class="container">
-        <div class="header__content">
+      <div class="header__content">
+        <div class="container">
           <div class="top-bar">
             <a href="#" class="top-bar__logo">
-              <img src="/src/images/logo.png" alt="MyBike logo">
+              <img src="/src/images/logo.svg" alt="MyBike logo">
             </a>
             <div class="top-bar__icons">
-              <a href="#" class="icon icon--phone"></a>
+              <div class="top-bar__phone">
+                <a href="tel:+12345555555" class="icon icon--phone"></a>
+                <span class="top-bar__phone-number">+1 234 5555-55-55</span>
+              </div>
               <a href="#menu" class="icon icon--menu"></a>
             </div>
           </div>
+        </div>
+
+        <div class="container">
           <div class="header__bottom">
             <h1 class="header__title">Take the Streets</h1>
           </div>
         </div>
       </div>
+    </div>
     </header>
 
     <aside class="page__menu menu" id="menu">
       <div class="container">
         <div class="top-bar menu__top">
           <a href="#" class="top-bar__logo">
-            <img src="/src/images/logo-dark.png" alt="MyBike dark logo">
+            <img src="/src/images/logo-dark.svg" alt="MyBike dark logo">
           </a>
           <a href="#" class="icon icon--close"></a>
         </div>
@@ -179,25 +187,43 @@
 
               <article class="detail">
                 <div class="detail__photos">
-                  <a href="#" class="detail__link detail__link--wide">
+                  <a
+                    href="#"
+                    class="detail__link detail__link--square"
+                  >
                     <img
-                    class="detail__photo"
-                    src="src/images/products/brakes-1.png"
-                    alt="Hydraulic disc brakes & Lightweight"
-                    >
+                      class="detail__photo"
+                      src="src/images/products/brakes-1.png"
+                      alt="Hydraulic disc brakes & Lightweight"
+                    />
                   </a>
-
-                  <a href="#" class="detail__link detail__link--square">
+                  <a
+                    href="#"
+                    class="detail__link detail__link--wide"
+                  >
                     <img
-                    class="detail__photo"
-                    src="src/images/products/brakes-2.png"
-                    alt="Hydraulic disc brakes & Lightweight"
-                    >
+                      class="detail__photo"
+                      src="src/images/products/brakes-2.png"
+                      alt="Hydraulic disc brakes & Lightweight"
+                    />
                   </a>
                 </div>
-                <h3 class="detail__title">Hydraulic disc brakes & Lightweight</h3>
-                <p class="detail__description">Brakes with total stopping power the second you make contact. The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
+                <h3 class="detail__title">
+                  Hydraulic disc brakes & Lightweight
+                </h3>
+                <p class="detail__description">
+                  Brakes with total stopping power the second you make contact.
+                  The removable battery has up to 70km battery autonomy and
+                  weighs only 2.4 kg. Lights integrated into the frame give you
+                  always-on visibility day and night.
+                </p>
               </article>
+
+              <div class="detail__actions">
+                <button class="contact__button">
+                  Explore
+                </button>
+              </div>
             </div>
           </section>
           <section class="contacts" id="contacts">
@@ -205,7 +231,7 @@
               <h2 class="section-title">Contact us</h2>
 
               <div class="contact__content">
-                <form class="contact__form">
+                <form class="contact__form" onsubmit="this.reset(); return false;">
                   <input
                   type="text"
                   placeholder="Name"
@@ -216,28 +242,36 @@
                   placeholder="Email"
                   required
                   >
-                  <textarea placeholder="Message" rows="5"></textarea>
+                  <textarea
+                  placeholder="Message"
+                  rows="5"
+                  required
+                  ></textarea>
                   <button type="submit" class="contact__button">Send</button>
                 </form>
 
                 <div class="contact__info">
                   <div class="contact__block">
                     <span>Phone</span>
-                    <p>+1 234 5555-55-55</p>
+                    <a href="tel:+12345555555" class="contact__link">+1 234 5555-55-55</a>
                   </div>
 
                   <div class="contact__block">
                     <span>Email</span>
-                    <p>hello@miami.com</p>
+                    <a href="mailto:hello@miami.com" class="contact__link">hello@miami.com</a>
                   </div>
 
                   <div class="contact__block">
                     <span>Adress</span>
-                    <p>
+                    <a
+                    href="https://www.google.com/maps?q=400+First+Ave+Suite+700+Minneapolis+MN+55401"
+                    class="contact__link"
+                    target="_blank"
+                    >
                       400 first ave.<br>
                       suite 700<br>
                       Minneapolis, MN 55401
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
