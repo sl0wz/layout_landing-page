@@ -18,5 +18,13 @@
 
   &--align--left {
     text-align: left;
+
+    @include on-desktop {
+      padding: 0 70px;
+    }
+
+    @include on-tablet {
+      padding: 0 40px;
+    }
   }
 }
